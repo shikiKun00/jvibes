@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    background: transparent;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+img {
+    width: 100%;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+a,
+button {
+    color: inherit;
+}
+
+:root {
+    --prymari: rgba(18, 14, 30, 1);
+    --button: rgba(79, 38, 150, 1);
+    --nav: rgb(43, 33, 83);
+    --text: #e4f1ff;
+}
+
+body {
+    display: grid;
+    color: var(--text);
+    font-family: "Rubik";
+    background-color: var(--prymari);
+    letter-spacing: 0.05rem;
+    font-size: 16px;
+    position: relative;
+}
+
+body button,
+body a,
+body i {
+    font-size: 0.8rem;
+    font-family: inherit;
+}
+
+body p {
+    font-size: 0.95rem;
+}
+
+.container {
+    display: grid;
+    align-items: center;
+    row-gap: 16rem;
+}
+
+.modal-box {
+    width: 95%;
+    position: fixed;
+    background-color: var(--button);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    top: -100%;
+    display: grid;
+    row-gap: 10px;
+    justify-items: center;
+    transition: 0.5s;
+    justify-self: center;
+}
+
+.modal-box a {
+    text-decoration: underline;
+    font-size: 1rem;
+}
+
+.modal-box .close-modal-box {
+    border-radius: 0.4rem;
+    background-color: rgba(130, 20, 10, 1);
+    padding: 0.4rem 1rem 0.3rem;
+    transition: 0.5s;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.modal-box .close-modal-box:hover {
+    background-color: rgba(160, 20, 10, 1);
+}
+/* end reset */
+
+/* reuse class */
+body .container section .heading-text {
+    display: grid;
+    row-gap: 0.6rem;
+    padding: 0 0.6rem;
+}
+
+body .container section .main-contents {
+    display: grid;
+    row-gap: 10rem;
+    padding: 0 0.8rem;
+    margin-top: 1.4rem;
+}
+
+body .container section .wrapper {
+    display: grid;
+    row-gap: 0.7rem;
+    justify-items: start;
+    align-items: center;
+}
+/* end reuse class */
+
+/* navbar */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.3rem;
+    background-color: var(--nav);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--button);
+}
+
+.navbar h2 {
+    font-weight: 700;
+}
+
+.navbar .navLinks {
+    top: 200px;
+    background-color: var(--nav);
+    position: absolute;
+    display: grid;
+    row-gap: 15px;
+    align-items: center;
+    width: 45vw;
+    height: 350px;
+    padding: 0.4rem 1.3rem;
+    font-weight: 600;
+    text-align: end;
+    border-left: 2px solid var(--button);
+    border-right: 2px solid var(--button);
+    border-bottom: 2px solid var(--button);
+    border-radius: 0 0 0.5em 0.5em;
+    opacity: 0.9;
+    right: -100%;
+    transition: 0.5s;
+}
+
+.navbar .navLinks.active {
+    right: 0;
+}
+
+.navbar .navLinks .language {
+    justify-self: end;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 0.6rem;
+}
+
+.navbar .navLinks .language button {
+    font-size: 1.2rem;
+}
+/* end navbar */
+
+/* hero */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    border-radius: 0;
+}
+
+.hero .content {
+    width: 68%;
+    position: absolute;
+    bottom: 0.2rem;
+    padding: 1rem;
+    display: grid;
+    row-gap: 0.7rem;
+    border-radius: 0 3rem 3rem 0;
+    align-items: center;
+    justify-items: start;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero .content p {
+    font-size: 0.65rem;
+}
+
+.hero a {
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    border: 2px solid var(--button);
+    transition: 0.5s;
+}
+
+.hero .content a:hover {
+    border-color: rgba(66, 58, 184, 1);
+    box-shadow: 0 0 40px 10px rgba(69, 55, 174, 0.2);
+}
+/* end hero */
+
+/* alphabet */
+.alphabets .wrapper {
+    row-gap: 0.8rem;
+    background-color: var(--nav);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+/* end alphabet */
+
+/* bunka */
+.bunka {
+    display: grid;
+    row-gap: 0.5rem;
+}
+/* end bunka */
+
+/* ryouri */
+.ryouri .parent-el {
+    display: grid;
+    row-gap: 3rem;
+    background-color: var(--nav);
+    padding: 2rem 1.1rem 4rem;
+    border-radius: 0 4rem 0 4rem;
+}
+
+.ryouri .parent-el .main-content {
+    display: grid;
+    row-gap: 2.7rem;
+}
+
+.ryouri .parent-el .main-content .content {
+    display: grid;
+    row-gap: 0.6rem;
+}
+/* end ryouri */
+
+/* machi */
+.machi .parent-el {
+    display: grid;
+    row-gap: 1.6rem;
+    padding: 0 1rem;
+}
+
+.machi .parent-el .heading-content {
+    display: grid;
+    row-gap: 0.8rem;
+}
+
+.machi .parent-el .main-content {
+    display: grid;
+    row-gap: 2.3rem;
+}
+
+.machi .parent-el .main-content .content {
+    display: grid;
+    row-gap: 0.7rem;
+    padding: 0 0.5rem;
+}
+/* end machi */
+
+/* footer */
+footer {
+    padding: 1.4rem 1rem;
+    display: grid;
+    row-gap: 0.6rem;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--nav);
+}
+
+footer .media {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 0.4rem;
+    justify-items: center;
+}
+/* end footer */
