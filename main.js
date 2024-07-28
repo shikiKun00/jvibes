@@ -28,6 +28,12 @@ const modalBox = document.querySelector(".modal-box");
 const modalBoxCloseBtn = modalBox.querySelector(".close-modal-box");
 const link = modalBox.querySelector("a");
 
+const dataAuthorSliced = img => {
+    const imgSliced = img.dataset.author.split("/");
+
+    return imgSliced[imgSliced.length - 1];
+};
+
 window.addEventListener("load", () => {
     container.style.paddingTop = navbar.clientHeight + "px";
     navLinks.style.top = navbar.clientHeight + "px";
@@ -35,8 +41,8 @@ window.addEventListener("load", () => {
     images.forEach((img, i) => {
         img.addEventListener("click", () => {
             link.href = link.href + img.dataset.author;
-
-            link.textContent = img.dataset.author;
+            
+            link.textContent = dataAuthorSliced(img);
             modalBox.style.top = navbar.clientHeight + "px";
         });
     });

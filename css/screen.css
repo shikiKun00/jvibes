@@ -1,0 +1,5 @@
+@media (min-width: 1380px) {
+    body .container section p {
+        background-color: red;
+    }
+}
