@@ -1,5 +1,44 @@
+@media (min-width: 768px) {
+    :root {
+        font-size: 28px;
+    }
+
+    body .container section.outer {
+        padding-right: 0.8rem;
+        padding-left: 0.8rem;
+    }
+}
+
+@media (min-width: 1028px) {
+    :root {
+        font-size: 33px;
+    }
+
+    .navbar .navLinks {
+        width: 100%;
+        top: 50px;
+        display: flex;
+        padding: 0.6rem 0.8rem;
+        text-align: center;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+
+    body div.container section.outer {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
 @media (min-width: 1380px) {
-    body .container section p {
-        background-color: red;
+    body div.container section.outer {
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+
+    body .container section .wrapper {
+        align-items: start;
+        column-gap: 0.6rem;
+        grid-template-columns: 1fr 2fr;
     }
 }

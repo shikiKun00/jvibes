@@ -15,8 +15,9 @@ img {
     border-radius: 10px;
 }
 
-a,
-button {
+body .container a,
+body .container button {
+    font-size: 1rem;
     color: inherit;
 }
 
@@ -33,15 +34,8 @@ body {
     font-family: "Rubik";
     background-color: var(--prymari);
     letter-spacing: 0.05rem;
-    font-size: 16px;
+    font-size: 1rem;
     position: relative;
-}
-
-body button,
-body a,
-body i {
-    font-size: 0.8rem;
-    font-family: inherit;
 }
 
 body p {
@@ -111,6 +105,11 @@ body .container section .wrapper {
     justify-items: start;
     align-items: center;
 }
+
+body .container section .wrapper .wrapper-info {
+    display: grid;
+    row-gap: 0.6rem;
+}
 /* end reuse class */
 
 /* navbar */
@@ -137,11 +136,10 @@ body .container section .wrapper {
     background-color: var(--nav);
     position: absolute;
     display: grid;
-    row-gap: 15px;
+    row-gap: 1.5rem;
     align-items: center;
-    width: 45vw;
-    height: 350px;
-    padding: 0.4rem 1.3rem;
+    width: 65vw;
+    padding: 0.7rem 0.6rem 0.7rem 1.9rem;
     font-weight: 600;
     text-align: end;
     border-left: 2px solid var(--button);
@@ -157,16 +155,19 @@ body .container section .wrapper {
     right: 0;
 }
 
-.navbar .navLinks .language {
+.navbar .cta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.navbar .language {
     justify-self: end;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 0.6rem;
 }
 
-.navbar .navLinks .language button {
-    font-size: 1.2rem;
-}
 /* end navbar */
 
 /* hero */
@@ -182,7 +183,7 @@ body .container section .wrapper {
 }
 
 .hero .content {
-    width: 88%;
+    width: 80%;
     position: absolute;
     padding: 1rem 1.5rem;
     display: grid;
@@ -191,7 +192,7 @@ body .container section .wrapper {
     align-items: center;
     justify-items: center;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .hero .content p {
@@ -203,6 +204,7 @@ body .container section .wrapper {
     border-radius: 0.3rem;
     border: 2px solid var(--button);
     transition: 0.5s;
+    font-size: 0.8rem;
 }
 
 .hero .content a:hover {
@@ -227,14 +229,15 @@ body .container section .wrapper {
 }
 /* end bunka */
 
-ryouri .ryouri .parent-el {
+.ryouri .ryouri .parent-el {
     display: grid;
     row-gap: 3rem;
     background-color: var(--nav);
     padding: 2rem 1.1rem 4rem;
     border-radius: 0 4rem 0 4rem;
 }
-*/ .ryouri .parent-el .main-content {
+
+.ryouri .parent-el .main-content {
     display: grid;
     row-gap: 2.7rem;
 }

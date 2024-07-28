@@ -40,10 +40,14 @@ window.addEventListener("load", () => {
 
     images.forEach((img, i) => {
         img.addEventListener("click", () => {
-            link.href = link.href + img.dataset.author;
             
-            link.textContent = dataAuthorSliced(img);
+            link.href = 'https://'
+            
+            link.href = link.href + img.dataset.author;
+            link.textContent = link.href;
+
             modalBox.style.top = navbar.clientHeight + "px";
+            console.log(link);
         });
     });
 
